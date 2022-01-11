@@ -1,0 +1,16 @@
+.card {
+  background: white;
+  padding: 7px;
+  border-radius: 4px;
+}
+.container {
+  gap: 3px;
+  display: flex;
+}
+.type {
+  border-radius: 0 5px 5px 5px;
+  padding: 10px;
+  span {
+    font-weight: 600;
+  }
+}

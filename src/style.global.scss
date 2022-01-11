@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background: rgb(5, 8, 1);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.App {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.4) -30%,
+    rgba(0, 0, 0, 0.3)
+  );
+  backdrop-filter: blur(4px);
+  width: 85vw;
+  padding: 20px;
+  margin-block: 20px;
+  border-radius: 8px;
+  box-shadow: 8px 8px 6px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title {
+    color: white;
+    backdrop-filter: brightness(5);
+    padding: 8px 15px;
+    border-radius: 8px;
+  }
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    align-items: center;
+    .nextprev {
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5em;
+      padding: 8px 15px;
+      border-radius: 5px;
+      background: rgb(0, 0, 151);
+      border: none;
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+  }
+}
+.pages {
+  button {
+    cursor: pointer;
+    color: white;
+    border: none;
+    margin-inline: 6px;
+    font-size: 1.7em;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 15px;
+    border-radius: 5px;
+  }
+}
