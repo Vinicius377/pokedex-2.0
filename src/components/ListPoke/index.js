@@ -11,13 +11,18 @@ function ListPoke({ currentPage, detailsPage }) {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=1118")
       .then((result) => result.json())
       .then((data) => {
-        detailsPage.totalPages = Math.ceil(data.count / 42) + 1;
+        detailsPage.countItens = data.count;
         setAllPokemons(data.results);
       });
   }, []);
 
   useEffect(() => {
-    setListPoke(allPokemons.slice(42 * (currentPage - 1), 42 * currentPage));
+    setListPoke(
+      allPokemons.slice(
+        detailsPage.countViewItens * (currentPage - 1),
+        detailsPage.countViewItens * currentPage
+      )
+    );
   }, [currentPage, allPokemons, setListPoke]);
 
   return (
